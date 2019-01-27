@@ -10,6 +10,7 @@
 		9A60761B21FE2CE70067C768 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A60761121FE2CE70067C768 /* DomainLayer.framework */; };
 		9A60762021FE2CE70067C768 /* DomainLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60761F21FE2CE70067C768 /* DomainLayerTests.swift */; };
 		9A60762221FE2CE70067C768 /* DomainLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A60761421FE2CE70067C768 /* DomainLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A60766421FE2F760067C768 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60766321FE2F760067C768 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9A60761A21FE2CE70067C768 /* DomainLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A60761F21FE2CE70067C768 /* DomainLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainLayerTests.swift; sourceTree = "<group>"; };
 		9A60762121FE2CE70067C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A60766321FE2F760067C768 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		9A60761321FE2CE70067C768 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9A60766221FE2F690067C768 /* Entities */,
 				9A60761421FE2CE70067C768 /* DomainLayer.h */,
 				9A60761521FE2CE70067C768 /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				9A60762121FE2CE70067C768 /* Info.plist */,
 			);
 			path = DomainLayerTests;
+			sourceTree = "<group>";
+		};
+		9A60766221FE2F690067C768 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9A60766321FE2F760067C768 /* Response.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				TargetAttributes = {
 					9A60761021FE2CE70067C768 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					9A60761921FE2CE70067C768 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A60766421FE2F760067C768 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		9A60762621FE2CE70067C768 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = noteboy.DomainLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +380,7 @@
 		9A60762721FE2CE70067C768 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +405,7 @@
 		9A60762921FE2CE70067C768 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DomainLayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +423,7 @@
 		9A60762A21FE2CE70067C768 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DomainLayerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
