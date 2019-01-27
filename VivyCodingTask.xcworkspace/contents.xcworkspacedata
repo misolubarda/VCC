@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:DataLayer/DataLayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DomainLayer/DomainLayer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:VivyCodingTask.xcodeproj">
    </FileRef>
    <FileRef
