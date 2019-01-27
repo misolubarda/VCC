@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A58A9F521FE38890034CDF5 /* AllCountriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9F421FE38890034CDF5 /* AllCountriesInteractor.swift */; };
+		9A58A9F621FE38A50034CDF5 /* CountriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9F021FE38610034CDF5 /* CountriesProvider.swift */; };
+		9A58A9F721FE38CD0034CDF5 /* AllCountriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9EE21FE38610034CDF5 /* AllCountriesUseCase.swift */; };
 		9A60761B21FE2CE70067C768 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A60761121FE2CE70067C768 /* DomainLayer.framework */; };
 		9A60762021FE2CE70067C768 /* DomainLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60761F21FE2CE70067C768 /* DomainLayerTests.swift */; };
-		9A60762221FE2CE70067C768 /* DomainLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A60761421FE2CE70067C768 /* DomainLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A60766421FE2F760067C768 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60766321FE2F760067C768 /* Response.swift */; };
+		9A60766E21FE34D90067C768 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60766D21FE34D90067C768 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +27,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A58A9EE21FE38610034CDF5 /* AllCountriesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCountriesUseCase.swift; sourceTree = "<group>"; };
+		9A58A9F021FE38610034CDF5 /* CountriesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesProvider.swift; sourceTree = "<group>"; };
+		9A58A9F421FE38890034CDF5 /* AllCountriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCountriesInteractor.swift; sourceTree = "<group>"; };
 		9A60761121FE2CE70067C768 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A60761421FE2CE70067C768 /* DomainLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DomainLayer.h; sourceTree = "<group>"; };
 		9A60761521FE2CE70067C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A60761A21FE2CE70067C768 /* DomainLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A60761F21FE2CE70067C768 /* DomainLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainLayerTests.swift; sourceTree = "<group>"; };
 		9A60762121FE2CE70067C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A60766321FE2F760067C768 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		9A60766B21FE34B20067C768 /* AllCountriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCountriesUseCase.swift; sourceTree = "<group>"; };
+		9A60766D21FE34D90067C768 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		9A60766F21FE36F90067C768 /* AllCountriesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCountriesProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,12 +60,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A58A9EA21FE381B0034CDF5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				9A60766B21FE34B20067C768 /* AllCountriesUseCase.swift */,
+				9A60766F21FE36F90067C768 /* AllCountriesProvider.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		9A58A9ED21FE38610034CDF5 /* Use cases */ = {
+			isa = PBXGroup;
+			children = (
+				9A58A9EE21FE38610034CDF5 /* AllCountriesUseCase.swift */,
+			);
+			path = "Use cases";
+			sourceTree = "<group>";
+		};
+		9A58A9EF21FE38610034CDF5 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				9A58A9F021FE38610034CDF5 /* CountriesProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		9A58A9F321FE386E0034CDF5 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				9A58A9F421FE38890034CDF5 /* AllCountriesInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
 		9A60760721FE2CE70067C768 = {
 			isa = PBXGroup;
 			children = (
 				9A60761321FE2CE70067C768 /* DomainLayer */,
 				9A60761E21FE2CE70067C768 /* DomainLayerTests */,
 				9A60761221FE2CE70067C768 /* Products */,
+				9A58A9EA21FE381B0034CDF5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,8 +115,10 @@
 		9A60761321FE2CE70067C768 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9A58A9EF21FE38610034CDF5 /* Providers */,
+				9A58A9F321FE386E0034CDF5 /* Interactors */,
+				9A58A9ED21FE38610034CDF5 /* Use cases */,
 				9A60766221FE2F690067C768 /* Entities */,
-				9A60761421FE2CE70067C768 /* DomainLayer.h */,
 				9A60761521FE2CE70067C768 /* Info.plist */,
 			);
 			path = DomainLayer;
@@ -93,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				9A60766321FE2F760067C768 /* Response.swift */,
+				9A60766D21FE34D90067C768 /* Country.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -104,7 +149,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A60762221FE2CE70067C768 /* DomainLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A58A9F621FE38A50034CDF5 /* CountriesProvider.swift in Sources */,
+				9A58A9F721FE38CD0034CDF5 /* AllCountriesUseCase.swift in Sources */,
+				9A58A9F521FE38890034CDF5 /* AllCountriesInteractor.swift in Sources */,
+				9A60766E21FE34D90067C768 /* Country.swift in Sources */,
 				9A60766421FE2F760067C768 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
