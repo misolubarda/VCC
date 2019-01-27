@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A6075E521FE29620067C768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075E421FE29620067C768 /* AppDelegate.swift */; };
+		9A6075E721FE29620067C768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075E621FE29620067C768 /* ViewController.swift */; };
+		9A6075EA21FE29620067C768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075E821FE29620067C768 /* Main.storyboard */; };
+		9A6075ED21FE29620067C768 /* VivyCodingTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075EB21FE29620067C768 /* VivyCodingTask.xcdatamodeld */; };
+		9A6075EF21FE29630067C768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075EE21FE29630067C768 /* Assets.xcassets */; };
+		9A6075F221FE29630067C768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075F021FE29630067C768 /* LaunchScreen.storyboard */; };
+		9A6075FD21FE29630067C768 /* VivyCodingTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075FC21FE29630067C768 /* VivyCodingTaskTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A6075F921FE29630067C768 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A6075D921FE29620067C768 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A6075E021FE29620067C768;
+			remoteInfo = VivyCodingTask;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9A6075E121FE29620067C768 /* VivyCodingTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivyCodingTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A6075E421FE29620067C768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A6075E621FE29620067C768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A6075E921FE29620067C768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A6075EC21FE29620067C768 /* VivyCodingTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VivyCodingTask.xcdatamodel; sourceTree = "<group>"; };
+		9A6075EE21FE29630067C768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A6075F121FE29630067C768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A6075F321FE29630067C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A6075F821FE29630067C768 /* VivyCodingTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivyCodingTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A6075FC21FE29630067C768 /* VivyCodingTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyCodingTaskTests.swift; sourceTree = "<group>"; };
+		9A6075FE21FE29630067C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A6075DE21FE29620067C768 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A6075F521FE29630067C768 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A6075D821FE29620067C768 = {
+			isa = PBXGroup;
+			children = (
+				9A6075E321FE29620067C768 /* VivyCodingTask */,
+				9A6075FB21FE29630067C768 /* VivyCodingTaskTests */,
+				9A6075E221FE29620067C768 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A6075E221FE29620067C768 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A6075E121FE29620067C768 /* VivyCodingTask.app */,
+				9A6075F821FE29630067C768 /* VivyCodingTaskTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A6075E321FE29620067C768 /* VivyCodingTask */ = {
+			isa = PBXGroup;
+			children = (
+				9A6075E421FE29620067C768 /* AppDelegate.swift */,
+				9A6075E621FE29620067C768 /* ViewController.swift */,
+				9A6075E821FE29620067C768 /* Main.storyboard */,
+				9A6075EE21FE29630067C768 /* Assets.xcassets */,
+				9A6075F021FE29630067C768 /* LaunchScreen.storyboard */,
+				9A6075F321FE29630067C768 /* Info.plist */,
+				9A6075EB21FE29620067C768 /* VivyCodingTask.xcdatamodeld */,
+			);
+			path = VivyCodingTask;
+			sourceTree = "<group>";
+		};
+		9A6075FB21FE29630067C768 /* VivyCodingTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A6075FC21FE29630067C768 /* VivyCodingTaskTests.swift */,
+				9A6075FE21FE29630067C768 /* Info.plist */,
+			);
+			path = VivyCodingTaskTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A6075E021FE29620067C768 /* VivyCodingTask */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A60760121FE29630067C768 /* Build configuration list for PBXNativeTarget "VivyCodingTask" */;
+			buildPhases = (
+				9A6075DD21FE29620067C768 /* Sources */,
+				9A6075DE21FE29620067C768 /* Frameworks */,
+				9A6075DF21FE29620067C768 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VivyCodingTask;
+			productName = VivyCodingTask;
+			productReference = 9A6075E121FE29620067C768 /* VivyCodingTask.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A6075F721FE29630067C768 /* VivyCodingTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A60760421FE29630067C768 /* Build configuration list for PBXNativeTarget "VivyCodingTaskTests" */;
+			buildPhases = (
+				9A6075F421FE29630067C768 /* Sources */,
+				9A6075F521FE29630067C768 /* Frameworks */,
+				9A6075F621FE29630067C768 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A6075FA21FE29630067C768 /* PBXTargetDependency */,
+			);
+			name = VivyCodingTaskTests;
+			productName = VivyCodingTaskTests;
+			productReference = 9A6075F821FE29630067C768 /* VivyCodingTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A6075D921FE29620067C768 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Lubarda, Miso";
+				TargetAttributes = {
+					9A6075E021FE29620067C768 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9A6075F721FE29630067C768 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9A6075E021FE29620067C768;
+					};
+				};
+			};
+			buildConfigurationList = 9A6075DC21FE29620067C768 /* Build configuration list for PBXProject "VivyCodingTask" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A6075D821FE29620067C768;
+			productRefGroup = 9A6075E221FE29620067C768 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A6075E021FE29620067C768 /* VivyCodingTask */,
+				9A6075F721FE29630067C768 /* VivyCodingTaskTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A6075DF21FE29620067C768 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A6075F221FE29630067C768 /* LaunchScreen.storyboard in Resources */,
+				9A6075EF21FE29630067C768 /* Assets.xcassets in Resources */,
+				9A6075EA21FE29620067C768 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A6075F621FE29630067C768 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A6075DD21FE29620067C768 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A6075ED21FE29620067C768 /* VivyCodingTask.xcdatamodeld in Sources */,
+				9A6075E721FE29620067C768 /* ViewController.swift in Sources */,
+				9A6075E521FE29620067C768 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A6075F421FE29630067C768 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A6075FD21FE29630067C768 /* VivyCodingTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A6075FA21FE29630067C768 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A6075E021FE29620067C768 /* VivyCodingTask */;
+			targetProxy = 9A6075F921FE29630067C768 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A6075E821FE29620067C768 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A6075E921FE29620067C768 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A6075F021FE29630067C768 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A6075F121FE29630067C768 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A6075FF21FE29630067C768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A60760021FE29630067C768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A60760221FE29630067C768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivyCodingTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noteboy.VivyCodingTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A60760321FE29630067C768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivyCodingTask/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noteboy.VivyCodingTask;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9A60760521FE29630067C768 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivyCodingTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noteboy.VivyCodingTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VivyCodingTask.app/VivyCodingTask";
+			};
+			name = Debug;
+		};
+		9A60760621FE29630067C768 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivyCodingTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noteboy.VivyCodingTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VivyCodingTask.app/VivyCodingTask";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A6075DC21FE29620067C768 /* Build configuration list for PBXProject "VivyCodingTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A6075FF21FE29630067C768 /* Debug */,
+				9A60760021FE29630067C768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A60760121FE29630067C768 /* Build configuration list for PBXNativeTarget "VivyCodingTask" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A60760221FE29630067C768 /* Debug */,
+				9A60760321FE29630067C768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A60760421FE29630067C768 /* Build configuration list for PBXNativeTarget "VivyCodingTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A60760521FE29630067C768 /* Debug */,
+				9A60760621FE29630067C768 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9A6075EB21FE29620067C768 /* VivyCodingTask.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A6075EC21FE29620067C768 /* VivyCodingTask.xcdatamodel */,
+			);
+			currentVersion = 9A6075EC21FE29620067C768 /* VivyCodingTask.xcdatamodel */;
+			path = VivyCodingTask.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9A6075D921FE29620067C768 /* Project object */;
+}
