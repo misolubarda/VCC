@@ -15,7 +15,7 @@ class AllCountriesInteractor: AllCountriesUseCase {
         self.provider = provider
     }
 
-    func fetch(_ completion: (Response<[Country]>) -> Void) {
+    func fetch(_ completion: @escaping (Response<[Country]>) -> Void) {
         provider.fetch(completion)
     }
 }

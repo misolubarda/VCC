@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol CountriesProvider {
-    func fetch(_ completion: (Response<[Country]>) -> Void)
+public protocol CountriesProvider {
+    func fetch(_ completion: @escaping (Response<[Country]>) -> Void)
 }

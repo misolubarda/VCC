@@ -14,6 +14,7 @@
 		9A60765E21FE2F300067C768 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60765921FE2F300067C768 /* ApiRequest.swift */; };
 		9A60766021FE2F300067C768 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60765B21FE2F300067C768 /* NetworkSession.swift */; };
 		9A60766121FE2F300067C768 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60765C21FE2F300067C768 /* WebService.swift */; };
+		9A6F8D0521FE49B100276B08 /* RCCountriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F8D0421FE49B100276B08 /* RCCountriesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		9A60765921FE2F300067C768 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		9A60765B21FE2F300067C768 /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		9A60765C21FE2F300067C768 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		9A6F8D0421FE49B100276B08 /* RCCountriesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCCountriesProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				9A60765721FE2F050067C768 /* Networking */,
+				9A6F8D0321FE492E00276B08 /* Providers */,
 				9A60763821FE2D030067C768 /* DataLayer.h */,
 				9A60763921FE2D030067C768 /* Info.plist */,
 			);
@@ -104,6 +107,14 @@
 				9A60765C21FE2F300067C768 /* WebService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		9A6F8D0321FE492E00276B08 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				9A6F8D0421FE49B100276B08 /* RCCountriesProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				9A60766021FE2F300067C768 /* NetworkSession.swift in Sources */,
 				9A60766121FE2F300067C768 /* WebService.swift in Sources */,
 				9A60765D21FE2F300067C768 /* Endpoint.swift in Sources */,
+				9A6F8D0521FE49B100276B08 /* RCCountriesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

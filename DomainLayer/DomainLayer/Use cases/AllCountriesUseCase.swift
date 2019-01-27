@@ -9,5 +9,5 @@
 import Foundation
 
 protocol AllCountriesUseCase {
-    func fetch(_ completion: (Response<[Country]>) -> Void)
+    func fetch(_ completion: @escaping (Response<[Country]>) -> Void)
 }
