@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A92451DE1DE7D35517E107F /* Pods_VivyCodingTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E8EA5E157F40944934B16 /* Pods_VivyCodingTask.framework */; };
 		9A6075E521FE29620067C768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075E421FE29620067C768 /* AppDelegate.swift */; };
 		9A6075E721FE29620067C768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075E621FE29620067C768 /* ViewController.swift */; };
 		9A6075EA21FE29620067C768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075E821FE29620067C768 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		9A6075EF21FE29630067C768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075EE21FE29630067C768 /* Assets.xcassets */; };
 		9A6075F221FE29630067C768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075F021FE29630067C768 /* LaunchScreen.storyboard */; };
 		9A6075FD21FE29630067C768 /* VivyCodingTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075FC21FE29630067C768 /* VivyCodingTaskTests.swift */; };
+		C048AC48F537F2FBB182086E /* Pods_VivyCodingTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7D1821B186FE1D5845FC7B /* Pods_VivyCodingTaskTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A7D1821B186FE1D5845FC7B /* Pods_VivyCodingTaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivyCodingTaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		221590A69FE51003AFD0796D /* Pods-VivyCodingTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTaskTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTaskTests/Pods-VivyCodingTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
+		520E8EA5E157F40944934B16 /* Pods_VivyCodingTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivyCodingTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AA77EEE60A982ED1EAC0F7E /* Pods-VivyCodingTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTaskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTaskTests/Pods-VivyCodingTaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A6075E121FE29620067C768 /* VivyCodingTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivyCodingTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6075E421FE29620067C768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A6075E621FE29620067C768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		9A6075F821FE29630067C768 /* VivyCodingTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivyCodingTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6075FC21FE29630067C768 /* VivyCodingTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyCodingTaskTests.swift; sourceTree = "<group>"; };
 		9A6075FE21FE29630067C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26EB13382DEB8234E46F227 /* Pods-VivyCodingTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTask/Pods-VivyCodingTask.debug.xcconfig"; sourceTree = "<group>"; };
+		DC4B5485287242185711B5CA /* Pods-VivyCodingTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTask/Pods-VivyCodingTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A92451DE1DE7D35517E107F /* Pods_VivyCodingTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C048AC48F537F2FBB182086E /* Pods_VivyCodingTaskTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23213BB5A5DE3CCF30132A11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				520E8EA5E157F40944934B16 /* Pods_VivyCodingTask.framework */,
+				1A7D1821B186FE1D5845FC7B /* Pods_VivyCodingTaskTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CF88F7A58433362EA7D0BDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D26EB13382DEB8234E46F227 /* Pods-VivyCodingTask.debug.xcconfig */,
+				DC4B5485287242185711B5CA /* Pods-VivyCodingTask.release.xcconfig */,
+				221590A69FE51003AFD0796D /* Pods-VivyCodingTaskTests.debug.xcconfig */,
+				7AA77EEE60A982ED1EAC0F7E /* Pods-VivyCodingTaskTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9A6075D821FE29620067C768 = {
 			isa = PBXGroup;
 			children = (
 				9A6075E321FE29620067C768 /* VivyCodingTask */,
 				9A6075FB21FE29630067C768 /* VivyCodingTaskTests */,
 				9A6075E221FE29620067C768 /* Products */,
+				2CF88F7A58433362EA7D0BDB /* Pods */,
+				23213BB5A5DE3CCF30132A11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +138,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A60760121FE29630067C768 /* Build configuration list for PBXNativeTarget "VivyCodingTask" */;
 			buildPhases = (
+				2CA911780A2471B6FC2EA3C7 /* [CP] Check Pods Manifest.lock */,
 				9A6075DD21FE29620067C768 /* Sources */,
 				9A6075DE21FE29620067C768 /* Frameworks */,
 				9A6075DF21FE29620067C768 /* Resources */,
@@ -123,6 +156,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A60760421FE29630067C768 /* Build configuration list for PBXNativeTarget "VivyCodingTaskTests" */;
 			buildPhases = (
+				38406D650C93A4658DCF797A /* [CP] Check Pods Manifest.lock */,
 				9A6075F421FE29630067C768 /* Sources */,
 				9A6075F521FE29630067C768 /* Frameworks */,
 				9A6075F621FE29630067C768 /* Resources */,
@@ -194,6 +228,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CA911780A2471B6FC2EA3C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VivyCodingTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38406D650C93A4658DCF797A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VivyCodingTaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9A6075DD21FE29620067C768 /* Sources */ = {
@@ -362,6 +443,7 @@
 		};
 		9A60760221FE29630067C768 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D26EB13382DEB8234E46F227 /* Pods-VivyCodingTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +461,7 @@
 		};
 		9A60760321FE29630067C768 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC4B5485287242185711B5CA /* Pods-VivyCodingTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +479,7 @@
 		};
 		9A60760521FE29630067C768 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221590A69FE51003AFD0796D /* Pods-VivyCodingTaskTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -416,6 +500,7 @@
 		};
 		9A60760621FE29630067C768 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AA77EEE60A982ED1EAC0F7E /* Pods-VivyCodingTaskTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
