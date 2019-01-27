@@ -15,6 +15,8 @@
 		9A6075EF21FE29630067C768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075EE21FE29630067C768 /* Assets.xcassets */; };
 		9A6075F221FE29630067C768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075F021FE29630067C768 /* LaunchScreen.storyboard */; };
 		9A6075FD21FE29630067C768 /* VivyCodingTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075FC21FE29630067C768 /* VivyCodingTaskTests.swift */; };
+		9A60765421FE2D730067C768 /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A60765321FE2D730067C768 /* DataLayer.framework */; };
+		9A60765621FE2D730067C768 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A60765521FE2D730067C768 /* DomainLayer.framework */; };
 		C048AC48F537F2FBB182086E /* Pods_VivyCodingTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7D1821B186FE1D5845FC7B /* Pods_VivyCodingTaskTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,8 @@
 		9A6075F821FE29630067C768 /* VivyCodingTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VivyCodingTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6075FC21FE29630067C768 /* VivyCodingTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VivyCodingTaskTests.swift; sourceTree = "<group>"; };
 		9A6075FE21FE29630067C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A60765321FE2D730067C768 /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A60765521FE2D730067C768 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26EB13382DEB8234E46F227 /* Pods-VivyCodingTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTask/Pods-VivyCodingTask.debug.xcconfig"; sourceTree = "<group>"; };
 		DC4B5485287242185711B5CA /* Pods-VivyCodingTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTask/Pods-VivyCodingTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A60765421FE2D730067C768 /* DataLayer.framework in Frameworks */,
+				9A60765621FE2D730067C768 /* DomainLayer.framework in Frameworks */,
 				8A92451DE1DE7D35517E107F /* Pods_VivyCodingTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +77,8 @@
 		23213BB5A5DE3CCF30132A11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A60765321FE2D730067C768 /* DataLayer.framework */,
+				9A60765521FE2D730067C768 /* DomainLayer.framework */,
 				520E8EA5E157F40944934B16 /* Pods_VivyCodingTask.framework */,
 				1A7D1821B186FE1D5845FC7B /* Pods_VivyCodingTaskTests.framework */,
 			);
