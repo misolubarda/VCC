@@ -23,8 +23,8 @@ class RCCountriesProvider: CountriesProvider {
         }
         webService.execute(request) { (response: Response<[RCCountry]>) in
             switch response {
-            case .success:
-                completion(.success([]))
+            case let .success(rcCountries):
+                completion(.success(rcCountries))
             case let .error(error):
                 completion(.error(error))
             }
@@ -32,5 +32,13 @@ class RCCountriesProvider: CountriesProvider {
     }
 }
 
-private struct RCCountry: Decodable {
+private struct RCCountry: Decodable, Country {
+    let name: String
+    let flag: String
+    let population: Int
+    let area: Double
+
+    var flagPath: String {
+        return flag
+    }
 }
