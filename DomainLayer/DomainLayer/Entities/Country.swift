@@ -10,7 +10,7 @@ import Foundation
 
 public protocol Country {
     var name: String { get }
-    var flagPath: String { get }
-    var population: Int { get }
-    var area: Double { get }
+    var flagPath: String? { get }
+    var population: Int? { get }
+    var area: Double? { get }
 }

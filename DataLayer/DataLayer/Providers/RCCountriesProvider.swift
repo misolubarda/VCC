@@ -38,11 +38,11 @@ public class RCCountriesProvider: CountriesProvider {
 
 private struct RCCountry: Decodable, Country {
     let name: String
-    let flag: String
-    let population: Int
-    let area: Double
+    let flag: String?
+    let population: Int?
+    let area: Double?
 
-    var flagPath: String {
+    var flagPath: String? {
         return flag
     }
 }
