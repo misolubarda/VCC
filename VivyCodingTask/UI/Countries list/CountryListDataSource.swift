@@ -7,9 +7,39 @@
 //
 
 import UIKit
+import DomainLayer
+
+protocol CountryListDataSourceFeedback: class {
+    func countryListDataSourceDidUpdate()
+    func countryListDataSourceFailedUpdate()
+}
+
+protocol CountryListDataSourceDependencies {
+    var allCountriesUseCase: AllCountriesUseCase { get }
+}
 
 class CountryListDataSource: NSObject {
+    weak var delegate: CountryListDataSourceFeedback?
 
+    private let dependencies: CountryListDataSourceDependencies
+    private var countries: [Country] = []
+
+    init(dependencies: CountryListDataSourceDependencies) {
+        self.dependencies = dependencies
+    }
+
+    func fetch() {
+        dependencies.allCountriesUseCase.fetch { [weak self] response in
+            switch response {
+            case let .success(countries):
+                self?.countries = countries
+                self?.delegate?.countryListDataSourceDidUpdate()
+            case .error:
+                self?.countries = []
+                self?.delegate?.countryListDataSourceFailedUpdate()
+            }
+        }
+    }
 }
 
 extension CountryListDataSource: UITableViewDataSource {
@@ -18,6 +48,6 @@ extension CountryListDataSource: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return countries.count
     }
 }

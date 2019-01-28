@@ -11,10 +11,10 @@ import UIKit
 class CountryListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
-    private let dataSource: CountryListDataSource
+//    private let dataSource: CountryListDataSource
 
     init() {
-        dataSource = CountryListDataSource()
+//        dataSource = CountryListDataSource()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -29,6 +29,6 @@ class CountryListViewController: UIViewController {
     }
 
     private func setupTableView() {
-        tableView.dataSource = dataSource
+//        tableView.dataSource = dataSource
     }
 }
