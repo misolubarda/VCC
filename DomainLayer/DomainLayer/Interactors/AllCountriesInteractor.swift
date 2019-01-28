@@ -8,14 +8,14 @@
 
 import Foundation
 
-class AllCountriesInteractor: AllCountriesUseCase {
+public class AllCountriesInteractor: AllCountriesUseCase {
     private let provider: CountriesProvider
 
-    init(provider: CountriesProvider) {
+    public init(provider: CountriesProvider) {
         self.provider = provider
     }
 
-    func fetch(_ completion: @escaping (Response<[Country]>) -> Void) {
+    public func fetch(_ completion: @escaping (Response<[Country]>) -> Void) {
         provider.fetch(completion)
     }
 }

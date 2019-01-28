@@ -9,14 +9,18 @@
 import Foundation
 import DomainLayer
 
-class RCCountriesProvider: CountriesProvider {
+public class RCCountriesProvider: CountriesProvider {
     private let webService: WebService
 
-    init(webService: WebService = WebServiceProvider(session: DataNetworkSession())) {
+    public convenience init() {
+        self.init(webService: WebServiceProvider(session: DataNetworkSession()))
+    }
+
+    init(webService: WebService) {
         self.webService = webService
     }
 
-    func fetch(_ completion: @escaping (Response<[Country]>) -> Void) {
+   public func fetch(_ completion: @escaping (Response<[Country]>) -> Void) {
         guard let request = ApiRequest(endpoint: .all).urlRequest else {
             completion(.error(RequestError.urlRequestFailed))
             return

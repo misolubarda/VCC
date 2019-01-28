@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var appCoordinator: AppCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        appCoordinator = AppCoordinator()
+        appCoordinator = AppCoordinator(dependencies: AppDependencies())
         appCoordinator.start()
         return true
     }

@@ -8,13 +8,15 @@
 
 import UIKit
 
+protocol CountryListViewControllerDependencies: CountryListDataSourceDependencies {}
+
 class CountryListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
-//    private let dataSource: CountryListDataSource
+    private let dataSource: CountryListDataSource
 
-    init() {
-//        dataSource = CountryListDataSource()
+    init(dependencies: CountryListViewControllerDependencies) {
+        dataSource = CountryListDataSource(dependencies: dependencies)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -26,9 +28,10 @@ class CountryListViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
+        dataSource.fetch()
     }
 
     private func setupTableView() {
-//        tableView.dataSource = dataSource
+        tableView.dataSource = dataSource
     }
 }
