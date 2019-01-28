@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A92451DE1DE7D35517E107F /* Pods_VivyCodingTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E8EA5E157F40944934B16 /* Pods_VivyCodingTask.framework */; };
+		9A34C4C621FF51CB001B0046 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4C521FF51CB001B0046 /* AppCoordinator.swift */; };
 		9A6075E521FE29620067C768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075E421FE29620067C768 /* AppDelegate.swift */; };
 		9A6075EF21FE29630067C768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075EE21FE29630067C768 /* Assets.xcassets */; };
 		9A6075F221FE29630067C768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075F021FE29630067C768 /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 		221590A69FE51003AFD0796D /* Pods-VivyCodingTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTaskTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTaskTests/Pods-VivyCodingTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		520E8EA5E157F40944934B16 /* Pods_VivyCodingTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivyCodingTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA77EEE60A982ED1EAC0F7E /* Pods-VivyCodingTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTaskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTaskTests/Pods-VivyCodingTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		9A34C4C521FF51CB001B0046 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9A6075E121FE29620067C768 /* VivyCodingTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivyCodingTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6075E421FE29620067C768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A6075EE21FE29630067C768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				9A6075E421FE29620067C768 /* AppDelegate.swift */,
+				9A34C4C521FF51CB001B0046 /* AppCoordinator.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A34C4C621FF51CB001B0046 /* AppCoordinator.swift in Sources */,
 				9A6075E521FE29620067C768 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
