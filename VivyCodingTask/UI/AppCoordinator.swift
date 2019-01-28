@@ -16,7 +16,7 @@ class AppCoordinator {
     }
 
     func start() {
-        window.rootViewController = UIViewController()
+        window.rootViewController = CountryListViewController()
         window.makeKeyAndVisible()
     }
 }
