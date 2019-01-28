@@ -18,6 +18,7 @@ class CountryListViewController: UIViewController {
     init(dependencies: CountryListViewControllerDependencies) {
         dataSource = CountryListDataSource(dependencies: dependencies)
         super.init(nibName: nil, bundle: nil)
+        dataSource.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -32,6 +33,17 @@ class CountryListViewController: UIViewController {
     }
 
     private func setupTableView() {
+        tableView.register(for: CountryListCell.self)
         tableView.dataSource = dataSource
+    }
+}
+
+extension CountryListViewController: CountryListDataSourceFeedback {
+    func countryListDataSourceDidUpdate() {
+        tableView.reloadData()
+    }
+
+    func countryListDataSourceFailedUpdate() {
+        tableView.reloadData()
     }
 }

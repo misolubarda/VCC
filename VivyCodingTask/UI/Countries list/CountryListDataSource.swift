@@ -44,7 +44,13 @@ class CountryListDataSource: NSObject {
 
 extension CountryListDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: CountryListCell.reuseIdentifier, for: indexPath)
+        if let cell = cell as? CountryListCell {
+            let country = countries[indexPath.row]
+            let viewModel = CountryListCellViewModel(country: country)
+            cell.setup(with: viewModel)
+        }
+        return cell
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
