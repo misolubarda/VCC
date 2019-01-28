@@ -9,11 +9,26 @@
 import UIKit
 
 class CountryListViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+
+    private let dataSource: CountryListDataSource
+
     init() {
+        dataSource = CountryListDataSource()
         super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
         return nil
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setupTableView()
+    }
+
+    private func setupTableView() {
+        tableView.dataSource = dataSource
     }
 }
