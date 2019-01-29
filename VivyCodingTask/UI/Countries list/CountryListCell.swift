@@ -34,7 +34,10 @@ struct CountryListCellViewModel {
         name = country.name
         population = country.population?.string ?? "N/A"
         area = country.area?.areaNaturalString ?? "N/A"
-        flagUrl = URL(string: country.flagPath ?? "")
+        let flagPath = country.flagPath
+        
+        // Remove this check when SVGKit bug is fixed. More details in the commit comment.
+        flagUrl = flagPath == "https://restcountries.eu/data/shn.svg" ? nil : URL(string: flagPath ?? "")
     }
 }
 
