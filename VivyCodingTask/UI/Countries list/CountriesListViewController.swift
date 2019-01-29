@@ -57,6 +57,10 @@ extension CountryListViewController: CountryListDataSourceFeedback {
 
 extension CountryListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-
+        if let term = searchController.searchBar.text, !term.isEmpty {
+            dataSource.fetch(term: term)
+            return
+        }
+        dataSource.fetch(term: nil)
     }
 }
