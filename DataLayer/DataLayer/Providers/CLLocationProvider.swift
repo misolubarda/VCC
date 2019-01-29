@@ -10,11 +10,11 @@ import Foundation
 import DomainLayer
 import CoreLocation
 
-class CLLocationProvider: NSObject, LocationProvider {
+public class CLLocationProvider: NSObject, LocationProvider {
     private let locationManager: CLLocationManager
     private var completion: ((Response<Location>) -> Void)?
 
-    convenience override init() {
+    public convenience override init() {
         self.init(locationManager: CLLocationManager())
     }
 
@@ -23,7 +23,7 @@ class CLLocationProvider: NSObject, LocationProvider {
         super.init()
     }
 
-    func fetch(_ completion: @escaping (Response<Location>) -> Void) {
+    public func fetch(_ completion: @escaping (Response<Location>) -> Void) {
         if let location = locationManager.location?.locationEntity {
             completion(.success(location))
             return
@@ -35,7 +35,7 @@ class CLLocationProvider: NSObject, LocationProvider {
 }
 
 extension CLLocationProvider: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    private func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first?.locationEntity else { return }
         completion?(.success(location))
         completion = nil
