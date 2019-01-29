@@ -33,20 +33,34 @@ public class CountryListInteractor: CountryListUseCase {
             guard let self = self else { return }
             switch response {
             case let .success(countries):
-                completion(.success(self.sortedCountriesUsing(location, from: countries)))
+                completion(.success(self.sortedFilteredCountriesUsing(location: location, term: term, from: countries)))
             case .error:
                 completion(response)
             }
         }
     }
 
-    private func sortedCountriesUsing(_ location: Location, from countries: [Country]) -> [Country] {
-        return countries.sorted() { first, second in
+    private func sortedFilteredCountriesUsing(location: Location, term: String?, from countries: [Country]) -> [Country] {
+        let sorted = countries.sorted() { first, second in
             guard let firstLocation = first.location else { return false }
             guard let secondLocation = second.location else { return true }
             let distanceToFirst = locationProvider.distance(from: firstLocation, to: location)
             let distanceToSecond = locationProvider.distance(from: secondLocation, to: location)
             return distanceToFirst <= distanceToSecond
+        }
+
+        if let term = term {
+            return sorted.filteredUsingTerm(term)
+        }
+
+        return sorted
+    }
+}
+
+private extension Array where Element == Country {
+    func filteredUsingTerm(_ term: String) -> [Country] {
+        return filter { country in
+            return country.name.contains(term)
         }
     }
 }
