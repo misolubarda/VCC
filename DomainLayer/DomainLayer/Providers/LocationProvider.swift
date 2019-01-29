@@ -9,5 +9,6 @@
 import Foundation
 
 public protocol LocationProvider {
+    func distance(from start: Location, to end: Location) -> Double
     func fetch(_ completion: @escaping (Response<Location>) -> Void)
 }

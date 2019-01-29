@@ -36,6 +36,10 @@ public class CLLocationProvider: NSObject, LocationProvider {
         }
         locationManager.requestLocation()
     }
+
+    public func distance(from start: Location, to end: Location) -> Double {
+        return start.clLocation.distance(from: end.clLocation)
+    }
 }
 
 extension CLLocationProvider: CLLocationManagerDelegate {
@@ -72,5 +76,11 @@ private extension CLLocation {
 private extension CLLocationCoordinate2D {
     var coordinateEntity: Coordinate {
         return CoordinateEntity(latitude: latitude, longitude: longitude)
+    }
+}
+
+private extension Location {
+    var clLocation: CLLocation {
+        return CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
 }

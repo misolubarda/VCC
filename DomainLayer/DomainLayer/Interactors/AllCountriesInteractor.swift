@@ -29,17 +29,24 @@ public class AllCountriesInteractor: AllCountriesUseCase {
     }
 
     private func countriesSortedUsing(_ location: Location, completion: @escaping (Response<[Country]>) -> Void) {
-        countriesProvider.fetch() { response in
+        countriesProvider.fetch() { [weak self] response in
+            guard let self = self else { return }
             switch response {
-            case var .success(countries):
-                countries.sort() { first, second in
-                    // provide sorting
-                    return true
-                }
-                completion(.success(countries))
+            case let .success(countries):
+                completion(.success(self.sortedCountriesUsing(location, from: countries)))
             case .error:
                 completion(response)
             }
+        }
+    }
+
+    private func sortedCountriesUsing(_ location: Location, from countries: [Country]) -> [Country] {
+        return countries.sorted() { first, second in
+            guard let firstLocation = first.location else { return false }
+            guard let secondLocation = second.location else { return true }
+            let distanceToFirst = locationProvider.distance(from: firstLocation, to: location)
+            let distanceToSecond = locationProvider.distance(from: secondLocation, to: location)
+            return distanceToFirst <= distanceToSecond
         }
     }
 }
