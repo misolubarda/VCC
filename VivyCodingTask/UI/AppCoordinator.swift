@@ -24,7 +24,8 @@ class AppCoordinator {
     }
 
     func start() {
-        window.rootViewController = CountryListViewController(dependencies: dependencies)
+        let countryListVC = CountryListViewController(dependencies: dependencies)
+        window.rootViewController = UINavigationController(rootViewController: countryListVC)
         window.makeKeyAndVisible()
     }
 }
