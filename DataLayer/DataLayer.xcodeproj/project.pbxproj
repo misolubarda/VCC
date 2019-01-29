@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A34C4F021FFD322001B0046 /* CLLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4EF21FFD322001B0046 /* CLLocationProvider.swift */; };
+		9A34C4F321FFE123001B0046 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4F221FFE123001B0046 /* LocationEntity.swift */; };
+		9A34C4F521FFE141001B0046 /* CoordinateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4F421FFE141001B0046 /* CoordinateEntity.swift */; };
 		9A60763F21FE2D030067C768 /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A60763521FE2D030067C768 /* DataLayer.framework */; };
 		9A60764421FE2D030067C768 /* DataLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60764321FE2D030067C768 /* DataLayerTests.swift */; };
 		9A60765D21FE2F300067C768 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60765821FE2F300067C768 /* Endpoint.swift */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		9A34C4EF21FFD322001B0046 /* CLLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationProvider.swift; sourceTree = "<group>"; };
+		9A34C4F221FFE123001B0046 /* LocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
+		9A34C4F421FFE141001B0046 /* CoordinateEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateEntity.swift; sourceTree = "<group>"; };
 		9A60763521FE2D030067C768 /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A60763921FE2D030067C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A60763E21FE2D030067C768 /* DataLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A34C4F121FFE10A001B0046 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9A34C4F221FFE123001B0046 /* LocationEntity.swift */,
+				9A34C4F421FFE141001B0046 /* CoordinateEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		9A60762B21FE2D030067C768 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +94,7 @@
 		9A60763721FE2D030067C768 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9A34C4F121FFE10A001B0046 /* Entities */,
 				9A60765721FE2F050067C768 /* Networking */,
 				9A6F8D0321FE492E00276B08 /* Providers */,
 				9A60763921FE2D030067C768 /* Info.plist */,
@@ -227,9 +241,11 @@
 			files = (
 				9A34C4F021FFD322001B0046 /* CLLocationProvider.swift in Sources */,
 				9A60765E21FE2F300067C768 /* ApiRequest.swift in Sources */,
+				9A34C4F321FFE123001B0046 /* LocationEntity.swift in Sources */,
 				9A60766021FE2F300067C768 /* NetworkSession.swift in Sources */,
 				9A60766121FE2F300067C768 /* WebService.swift in Sources */,
 				9A60765D21FE2F300067C768 /* Endpoint.swift in Sources */,
+				9A34C4F521FFE141001B0046 /* CoordinateEntity.swift in Sources */,
 				9A6F8D0521FE49B100276B08 /* RCCountriesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

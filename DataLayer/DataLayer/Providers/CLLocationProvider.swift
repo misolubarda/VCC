@@ -74,12 +74,3 @@ private extension CLLocationCoordinate2D {
         return CoordinateEntity(latitude: latitude, longitude: longitude)
     }
 }
-
-private struct LocationEntity: Location {
-    let coordinate: Coordinate
-}
-
-private struct CoordinateEntity: Coordinate {
-    let latitude: Double
-    let longitude: Double
-}
