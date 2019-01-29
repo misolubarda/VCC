@@ -60,7 +60,14 @@ public class CountryListInteractor: CountryListUseCase {
 private extension Array where Element == Country {
     func filteredUsingTerm(_ term: String) -> [Country] {
         return filter { country in
-            return country.name.contains(term)
+            var include = country.name.localizedCaseInsensitiveContains(term)
+            if let capitalCity = country.capitalCity {
+                include = include || capitalCity.localizedCaseInsensitiveContains(term)
+            }
+            if let languages = country.languages {
+                include = include || languages.contains { $0.localizedCaseInsensitiveContains(term) }
+            }
+            return include
         }
     }
 }

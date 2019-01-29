@@ -45,11 +45,18 @@ public class RCCountriesProvider: CountriesProvider {
 }
 
 private struct RCCountry: Decodable, Country {
+    enum CodingKeys: String, CodingKey {
+        case name, flag, population, area, latlng, capital
+        case rcLanguages = "languages"
+    }
+
     let name: String
     let flag: String?
     let population: Int?
     let area: Double?
     let latlng: [Double]?
+    let capital: String?
+    let rcLanguages: [RCLanguage]?
 
     var flagPath: String? {
         return flag
@@ -62,4 +69,16 @@ private struct RCCountry: Decodable, Country {
 
         return LocationEntity(coordinate: CoordinateEntity(latitude: latitude, longitude: longitude))
     }
+
+    var capitalCity: String? {
+        return capital
+    }
+
+    var languages: [String]? {
+        return rcLanguages?.map { $0.name }
+    }
+}
+
+private struct RCLanguage: Decodable {
+    let name: String
 }

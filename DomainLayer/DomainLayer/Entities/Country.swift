@@ -14,4 +14,6 @@ public protocol Country {
     var population: Int? { get }
     var area: Double? { get }
     var location: Location? { get }
+    var capitalCity: String? { get }
+    var languages: [String]? { get }
 }
