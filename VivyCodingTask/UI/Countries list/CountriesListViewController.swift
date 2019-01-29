@@ -41,6 +41,7 @@ class CountryListViewController: UIViewController {
     private func setupSearchController() {
         navigationItem.searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController?.searchResultsUpdater = self
+        definesPresentationContext = true
     }
 }
 
