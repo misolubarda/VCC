@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		9A34C4EC21FFD20E001B0046 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4EB21FFD20E001B0046 /* LocationProvider.swift */; };
 		9A34C4EE21FFD243001B0046 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4ED21FFD243001B0046 /* Location.swift */; };
-		9A58A9F521FE38890034CDF5 /* AllCountriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9F421FE38890034CDF5 /* AllCountriesInteractor.swift */; };
+		9A58A9F521FE38890034CDF5 /* CountryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9F421FE38890034CDF5 /* CountryListInteractor.swift */; };
 		9A58A9F621FE38A50034CDF5 /* CountriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9F021FE38610034CDF5 /* CountriesProvider.swift */; };
-		9A58A9F721FE38CD0034CDF5 /* AllCountriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9EE21FE38610034CDF5 /* AllCountriesUseCase.swift */; };
+		9A58A9F721FE38CD0034CDF5 /* CountryListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9EE21FE38610034CDF5 /* CountryListUseCase.swift */; };
 		9A60761B21FE2CE70067C768 /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A60761121FE2CE70067C768 /* DomainLayer.framework */; };
 		9A60762021FE2CE70067C768 /* DomainLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60761F21FE2CE70067C768 /* DomainLayerTests.swift */; };
 		9A60766421FE2F760067C768 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60766321FE2F760067C768 /* Response.swift */; };
@@ -31,9 +31,9 @@
 /* Begin PBXFileReference section */
 		9A34C4EB21FFD20E001B0046 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 		9A34C4ED21FFD243001B0046 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		9A58A9EE21FE38610034CDF5 /* AllCountriesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCountriesUseCase.swift; sourceTree = "<group>"; };
+		9A58A9EE21FE38610034CDF5 /* CountryListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListUseCase.swift; sourceTree = "<group>"; };
 		9A58A9F021FE38610034CDF5 /* CountriesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesProvider.swift; sourceTree = "<group>"; };
-		9A58A9F421FE38890034CDF5 /* AllCountriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCountriesInteractor.swift; sourceTree = "<group>"; };
+		9A58A9F421FE38890034CDF5 /* CountryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractor.swift; sourceTree = "<group>"; };
 		9A60761121FE2CE70067C768 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A60761521FE2CE70067C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A60761A21FE2CE70067C768 /* DomainLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +76,7 @@
 		9A58A9ED21FE38610034CDF5 /* Use cases */ = {
 			isa = PBXGroup;
 			children = (
-				9A58A9EE21FE38610034CDF5 /* AllCountriesUseCase.swift */,
+				9A58A9EE21FE38610034CDF5 /* CountryListUseCase.swift */,
 			);
 			path = "Use cases";
 			sourceTree = "<group>";
@@ -93,7 +93,7 @@
 		9A58A9F321FE386E0034CDF5 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				9A58A9F421FE38890034CDF5 /* AllCountriesInteractor.swift */,
+				9A58A9F421FE38890034CDF5 /* CountryListInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -257,8 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A58A9F621FE38A50034CDF5 /* CountriesProvider.swift in Sources */,
-				9A58A9F721FE38CD0034CDF5 /* AllCountriesUseCase.swift in Sources */,
-				9A58A9F521FE38890034CDF5 /* AllCountriesInteractor.swift in Sources */,
+				9A58A9F721FE38CD0034CDF5 /* CountryListUseCase.swift in Sources */,
+				9A58A9F521FE38890034CDF5 /* CountryListInteractor.swift in Sources */,
 				9A34C4EC21FFD20E001B0046 /* LocationProvider.swift in Sources */,
 				9A60766E21FE34D90067C768 /* Country.swift in Sources */,
 				9A60766421FE2F760067C768 /* Response.swift in Sources */,

@@ -15,7 +15,7 @@ protocol CountryListDataSourceFeedback: class {
 }
 
 protocol CountryListDataSourceDependencies {
-    var allCountriesUseCase: AllCountriesUseCase { get }
+    var countryListUseCase: CountryListUseCase { get }
 }
 
 class CountryListDataSource: NSObject {
@@ -29,7 +29,7 @@ class CountryListDataSource: NSObject {
     }
 
     func fetch() {
-        dependencies.allCountriesUseCase.fetch { [weak self] response in
+        dependencies.countryListUseCase.fetch { [weak self] response in
             switch response {
             case let .success(countries):
                 self?.countries = countries

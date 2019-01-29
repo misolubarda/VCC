@@ -11,6 +11,6 @@ import DomainLayer
 import DataLayer
 
 class AppDependencies: AppCoordinatorDependencies {
-    let allCountriesUseCase: AllCountriesUseCase = AllCountriesInteractor(countriesProvider: RCCountriesProvider(),
+    let countryListUseCase: CountryListUseCase = CountryListInteractor(countriesProvider: RCCountriesProvider(),
                                                                           locationProvider: CLLocationProvider())
 }

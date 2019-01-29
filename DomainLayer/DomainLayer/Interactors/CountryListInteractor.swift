@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class AllCountriesInteractor: AllCountriesUseCase {
+public class CountryListInteractor: CountryListUseCase {
     private let countriesProvider: CountriesProvider
     private let locationProvider: LocationProvider
 

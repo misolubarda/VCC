@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol AllCountriesUseCase {
+public protocol CountryListUseCase {
     func fetch(_ completion: @escaping (Response<[Country]>) -> Void)
 }
