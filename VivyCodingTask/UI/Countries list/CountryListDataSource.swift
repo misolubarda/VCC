@@ -28,8 +28,8 @@ class CountryListDataSource: NSObject {
         self.dependencies = dependencies
     }
 
-    func fetch() {
-        dependencies.countryListUseCase.fetch { [weak self] response in
+    func fetch(term: String?) {
+        dependencies.countryListUseCase.fetch(term: term) { [weak self] response in
             switch response {
             case let .success(countries):
                 self?.countries = countries

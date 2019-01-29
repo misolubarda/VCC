@@ -17,19 +17,19 @@ public class CountryListInteractor: CountryListUseCase {
         self.locationProvider = locationProvider
     }
 
-    public func fetch(_ completion: @escaping (Response<[Country]>) -> Void) {
+    public func fetch(term: String?, _ completion: @escaping (Response<[Country]>) -> Void) {
         locationProvider.fetch { [weak self] response in
             switch response {
             case let .success(location):
-                self?.countriesSortedUsing(location, completion: completion)
+                self?.sortedCountries(term: term, location: location, completion: completion)
             case let .error(error):
                 completion(.error(error))
             }
         }
     }
 
-    private func countriesSortedUsing(_ location: Location, completion: @escaping (Response<[Country]>) -> Void) {
-        countriesProvider.fetch() { [weak self] response in
+    private func sortedCountries(term: String?, location: Location, completion: @escaping (Response<[Country]>) -> Void) {
+        countriesProvider.fetch { [weak self] response in
             guard let self = self else { return }
             switch response {
             case let .success(countries):

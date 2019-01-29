@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol CountryListUseCase {
-    func fetch(_ completion: @escaping (Response<[Country]>) -> Void)
+    func fetch(term: String?, _ completion: @escaping (Response<[Country]>) -> Void)
 }

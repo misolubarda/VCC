@@ -30,7 +30,7 @@ class CountryListViewController: UIViewController {
 
         setupTableView()
         setupSearchController()
-        dataSource.fetch()
+        dataSource.fetch(term: nil)
     }
 
     private func setupTableView() {
