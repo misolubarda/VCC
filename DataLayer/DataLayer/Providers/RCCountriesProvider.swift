@@ -11,6 +11,7 @@ import DomainLayer
 
 public class RCCountriesProvider: CountriesProvider {
     private let webService: WebService
+    private var cache: [RCCountry]?
 
     public convenience init() {
         self.init(webService: WebServiceProvider(session: DataNetworkSession()))
@@ -20,14 +21,21 @@ public class RCCountriesProvider: CountriesProvider {
         self.webService = webService
     }
 
-   public func fetch(_ completion: @escaping (Response<[Country]>) -> Void) {
+    public func fetch(_ completion: @escaping (Response<[Country]>) -> Void) {
+        if let cache = cache {
+            completion(.success(cache))
+            return
+        }
+
         guard let request = ApiRequest(endpoint: .all).urlRequest else {
             completion(.error(RequestError.urlRequestFailed))
             return
         }
-        webService.execute(request) { (response: Response<[RCCountry]>) in
+
+        webService.execute(request) { [weak self] (response: Response<[RCCountry]>) in
             switch response {
             case let .success(rcCountries):
+                self?.cache = rcCountries
                 completion(.success(rcCountries))
             case let .error(error):
                 completion(.error(error))
