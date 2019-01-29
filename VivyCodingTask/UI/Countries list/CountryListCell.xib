@@ -19,38 +19,38 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7yf-zZ-F2q">
-                        <rect key="frame" x="9" y="11" width="60" height="60"/>
+                        <rect key="frame" x="9" y="11" width="90" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="5gF-8W-o1O"/>
-                            <constraint firstAttribute="width" secondItem="7yf-zZ-F2q" secondAttribute="height" id="7IZ-sm-y4R"/>
+                            <constraint firstAttribute="width" secondItem="7yf-zZ-F2q" secondAttribute="height" multiplier="900:600" id="7IZ-sm-y4R"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJ8-jl-C7B">
-                        <rect key="frame" x="77" y="30.5" width="340" height="21"/>
+                        <rect key="frame" x="107" y="30.5" width="310" height="21"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="il9-O0-bSV">
-                        <rect key="frame" x="245" y="55" width="32" height="16"/>
+                        <rect key="frame" x="275" y="55" width="32" height="16"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E25-g3-tcA">
-                        <rect key="frame" x="285" y="55" width="22.5" height="16"/>
+                        <rect key="frame" x="315" y="55" width="22.5" height="16"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-ms-xbz">
-                        <rect key="frame" x="77" y="55" width="68" height="16"/>
+                        <rect key="frame" x="107" y="55" width="68" height="16"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJE-Lx-xNK">
-                        <rect key="frame" x="153" y="55" width="22.5" height="16"/>
+                        <rect key="frame" x="183" y="55" width="22.5" height="16"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

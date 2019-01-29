@@ -8,6 +8,7 @@
 
 import UIKit
 import DomainLayer
+import SDWebImage
 
 class CountryListCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
@@ -19,6 +20,7 @@ class CountryListCell: UITableViewCell {
         nameLabel.text = viewModel.name
         populationLabel.text = viewModel.population
         areaLabel.text = viewModel.area
+        flagImageView.sd_setImage(with: viewModel.flagUrl)
     }
 }
 
@@ -26,13 +28,13 @@ struct CountryListCellViewModel {
     let name: String
     let population: String
     let area: String
-    let flagPath: String?
+    let flagUrl: URL?
 
     init(country: Country) {
         name = country.name
         population = country.population?.string ?? "N/A"
         area = country.area?.areaNaturalString ?? "N/A"
-        flagPath = country.flagPath
+        flagUrl = URL(string: country.flagPath ?? "")
     }
 }
 
