@@ -29,12 +29,18 @@ class CountryListViewController: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
+        setupSearchController()
         dataSource.fetch()
     }
 
     private func setupTableView() {
         tableView.register(for: CountryListCell.self)
         tableView.dataSource = dataSource
+    }
+
+    private func setupSearchController() {
+        navigationItem.searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController?.searchResultsUpdater = self
     }
 }
 
@@ -45,5 +51,11 @@ extension CountryListViewController: CountryListDataSourceFeedback {
 
     func countryListDataSourceFailedUpdate() {
         tableView.reloadData()
+    }
+}
+
+extension CountryListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+
     }
 }
