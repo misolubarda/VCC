@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import DomainLayer
 
 protocol AppCoordinatorDependencies: CountryListViewControllerDependencies {}
 
 class AppCoordinator {
     private let window: UIWindow
     private let dependencies: AppCoordinatorDependencies
+    private let navigation: UINavigationController
 
     convenience init(dependencies: AppCoordinatorDependencies) {
         self.init(window: UIWindow(frame: UIScreen.main.bounds), dependencies: dependencies)
@@ -21,11 +23,12 @@ class AppCoordinator {
     init(window: UIWindow, dependencies: AppCoordinatorDependencies) {
         self.window = window
         self.dependencies = dependencies
+        navigation = UINavigationController()
     }
 
     func start() {
-        let countryListVC = getCountryListVC(dependencies: dependencies)
-        window.rootViewController = UINavigationController(rootViewController: countryListVC)
+        navigation.viewControllers = [getCountryListVC(dependencies: dependencies)]
+        window.rootViewController = navigation
         window.makeKeyAndVisible()
     }
 
@@ -35,12 +38,16 @@ class AppCoordinator {
 
         return countryListVC
     }
+
+    private func getCountryDetailsVC(for country: Country) -> CountryDetailsViewController {
+        return CountryDetailsViewController(viewModel: CountryDetailsViewModel(country: country))
+    }
 }
 
 // MARK: Navigation item button action
 
 extension AppCoordinator {
     @objc func myCountryButtonTapped() {
-
+        
     }
 }
