@@ -41,8 +41,17 @@ private struct RCCountry: Decodable, Country {
     let flag: String?
     let population: Int?
     let area: Double?
+    let latlng: [Double]?
 
     var flagPath: String? {
         return flag
+    }
+
+    var location: Location? {
+        guard let latlng = latlng, latlng.count >= 2 else { return nil }
+        let latitude = latlng[0]
+        let longitude = latlng[1]
+
+        return LocationEntity(coordinate: CoordinateEntity(latitude: latitude, longitude: longitude))
     }
 }

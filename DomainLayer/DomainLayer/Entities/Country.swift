@@ -13,4 +13,5 @@ public protocol Country {
     var flagPath: String? { get }
     var population: Int? { get }
     var area: Double? { get }
+    var location: Location? { get }
 }
