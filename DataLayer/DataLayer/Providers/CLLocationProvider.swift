@@ -30,16 +30,37 @@ public class CLLocationProvider: NSObject, LocationProvider {
         }
         self.completion = completion
         locationManager.delegate = self
-        locationManager.startMonitoringSignificantLocationChanges()
+        guard CLLocationManager.authorizationStatus().isAuthorised else {
+            locationManager.requestWhenInUseAuthorization()
+            return
+        }
+        locationManager.requestLocation()
     }
 }
 
 extension CLLocationProvider: CLLocationManagerDelegate {
-    private func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first?.locationEntity else { return }
+        manager.stopUpdatingLocation()
         completion?(.success(location))
         completion = nil
     }
+
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        manager.stopUpdatingLocation()
+        completion?(.error(error))
+        completion = nil
+    }
+
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status.isAuthorised {
+            manager.requestLocation()
+        }
+    }
+}
+
+private extension CLAuthorizationStatus {
+    var isAuthorised: Bool { return (self == .authorizedAlways) || (self == .authorizedWhenInUse) }
 }
 
 private extension CLLocation {
