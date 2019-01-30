@@ -10,8 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountryDetailsViewController" customModule="VivyCodingTask" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrentCountryViewController" customModule="VivyCodingTask" customModuleProvider="target">
             <connections>
+                <outlet property="capitalLabel" destination="9Nz-R2-h7t" id="hHO-0g-yvF"/>
+                <outlet property="currencyLabel" destination="dMr-kh-IcF" id="mh0-GZ-ql3"/>
+                <outlet property="flagImageView" destination="afE-h8-w8h" id="U5c-wO-KqI"/>
+                <outlet property="languagesLabel" destination="el4-iP-n46" id="SDh-Vq-HjD"/>
+                <outlet property="nameLabel" destination="hDK-Ml-ia4" id="xQF-tg-52P"/>
+                <outlet property="populationLabel" destination="tZK-Qj-lum" id="uNs-4x-7UQ"/>
+                <outlet property="regionBlocksLabel" destination="AgF-eV-13c" id="feC-CL-Nz0"/>
+                <outlet property="regionLabel" destination="7nN-kO-a5F" id="Quf-4T-QxV"/>
                 <outlet property="view" destination="iN0-l3-epB" id="LtZ-Bj-NLc"/>
             </connections>
         </placeholder>
@@ -57,25 +65,25 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZK-Qj-lum">
-                    <rect key="frame" x="173.5" y="491.5" width="28.5" height="20.5"/>
+                    <rect key="frame" x="173.5" y="492" width="28.5" height="20.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qaj-7z-ntU">
-                    <rect key="frame" x="168" y="469" width="39" height="14.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qaj-7z-ntU">
+                    <rect key="frame" x="157.5" y="469" width="60" height="15"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el4-iP-n46">
-                    <rect key="frame" x="173.5" y="554.5" width="28.5" height="20.5"/>
+                    <rect key="frame" x="173.5" y="555.5" width="28.5" height="20.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKs-gP-0RQ">
-                    <rect key="frame" x="168" y="532" width="39" height="14.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKs-gP-0RQ">
+                    <rect key="frame" x="159.5" y="532.5" width="56" height="15"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -87,13 +95,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMr-kh-IcF">
-                    <rect key="frame" x="173.5" y="617.5" width="28.5" height="20.5"/>
+                    <rect key="frame" x="173.5" y="619" width="28.5" height="20.5"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rio-dc-Y4V">
-                    <rect key="frame" x="168" y="595" width="39" height="14.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rio-dc-Y4V">
+                    <rect key="frame" x="161.5" y="596" width="52" height="15"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
