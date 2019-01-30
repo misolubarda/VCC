@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A34C4EC21FFD20E001B0046 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4EB21FFD20E001B0046 /* LocationProvider.swift */; };
 		9A34C4EE21FFD243001B0046 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4ED21FFD243001B0046 /* Location.swift */; };
+		9A34C5062200B6EF001B0046 /* CurrentCountryIsoCodeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C5052200B6EF001B0046 /* CurrentCountryIsoCodeProvider.swift */; };
 		9A58A9F521FE38890034CDF5 /* CountryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9F421FE38890034CDF5 /* CountryListInteractor.swift */; };
 		9A58A9F621FE38A50034CDF5 /* CountriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9F021FE38610034CDF5 /* CountriesProvider.swift */; };
 		9A58A9F721FE38CD0034CDF5 /* CountryListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58A9EE21FE38610034CDF5 /* CountryListUseCase.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		9A34C4EB21FFD20E001B0046 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
 		9A34C4ED21FFD243001B0046 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9A34C5052200B6EF001B0046 /* CurrentCountryIsoCodeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCountryIsoCodeProvider.swift; sourceTree = "<group>"; };
 		9A58A9EE21FE38610034CDF5 /* CountryListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryListUseCase.swift; sourceTree = "<group>"; };
 		9A58A9F021FE38610034CDF5 /* CountriesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesProvider.swift; sourceTree = "<group>"; };
 		9A58A9F421FE38890034CDF5 /* CountryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractor.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			children = (
 				9A58A9F021FE38610034CDF5 /* CountriesProvider.swift */,
 				9A34C4EB21FFD20E001B0046 /* LocationProvider.swift */,
+				9A34C5052200B6EF001B0046 /* CurrentCountryIsoCodeProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				9A34C4EC21FFD20E001B0046 /* LocationProvider.swift in Sources */,
 				9A60766E21FE34D90067C768 /* Country.swift in Sources */,
 				9A60766421FE2F760067C768 /* Response.swift in Sources */,
+				9A34C5062200B6EF001B0046 /* CurrentCountryIsoCodeProvider.swift in Sources */,
 				9A34C4EE21FFD243001B0046 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

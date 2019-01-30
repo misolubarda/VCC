@@ -10,7 +10,7 @@ import Foundation
 import DomainLayer
 import CoreLocation
 
-public class CLLocationProvider: NSObject, LocationProvider {
+public class CLLocationProvider: NSObject, LocationProvider, CurrentCountryIsoCodeProvider {
     private let locationManager: CLLocationManager
     private var completion: ((Response<Location>) -> Void)?
 
@@ -40,6 +40,35 @@ public class CLLocationProvider: NSObject, LocationProvider {
     public func distance(from start: Location, to end: Location) -> Double {
         return start.clLocation.distance(from: end.clLocation)
     }
+
+    public func fetchCountryIso(_ completion: @escaping (Response<String>) -> Void) {
+        fetch { [weak self] response in
+            switch response {
+            case let .success(location):
+                self?.fetchCountryIso(from: location, completion)
+            case let .error(error):
+                completion(.error(error))
+            }
+        }
+    }
+
+    private func fetchCountryIso(from location: Location, _ completion: @escaping (Response<String>) -> Void) {
+        let geoCoder = CLGeocoder()
+        geoCoder.reverseGeocodeLocation(location.clLocation) { placemarks, error in
+            if let error = error {
+                completion(.error(error))
+            } else if let countryIso = placemarks?.first?.isoCountryCode {
+                completion(.success(countryIso))
+            } else {
+                completion(.error(CLLocationProviderError.isoCountryCodeMissing))
+            }
+        }
+
+    }
+}
+
+private enum CLLocationProviderError: Error {
+    case isoCountryCodeMissing
 }
 
 extension CLLocationProvider: CLLocationManagerDelegate {
