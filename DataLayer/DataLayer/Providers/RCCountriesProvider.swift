@@ -23,7 +23,9 @@ public class RCCountriesProvider: CountriesProvider {
 
     public func fetch(_ completion: @escaping (Response<[Country]>) -> Void) {
         if let cache = cache {
-            completion(.success(cache))
+            DispatchQueue.main.async {
+                completion(.success(cache))
+            }
             return
         }
 
