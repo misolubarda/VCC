@@ -50,6 +50,7 @@ private struct RCCountry: Decodable, Country {
     enum CodingKeys: String, CodingKey {
         case name, flag, population, area, latlng, capital
         case rcLanguages = "languages"
+        case iso = "alpha2Code"
     }
 
     let name: String
@@ -59,6 +60,7 @@ private struct RCCountry: Decodable, Country {
     let latlng: [Double]?
     let capital: String?
     let rcLanguages: [RCLanguage]?
+    let iso: String?
 
     var flagPath: String? {
         return flag

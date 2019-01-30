@@ -16,4 +16,5 @@ public protocol Country {
     var location: Location? { get }
     var capitalCity: String? { get }
     var languages: [String]? { get }
+    var iso: String? { get }
 }
