@@ -17,6 +17,7 @@ struct CountryDetailsViewModel {
     let regionBlocks: String
     let languages: String
     let currency: String
+    let flagUrl: URL?
 
     init(country: Country) {
         name = country.name
@@ -26,6 +27,10 @@ struct CountryDetailsViewModel {
         region = "N/A"
         regionBlocks = "N/A"
         currency = "N/A"
+
+        // Remove this check when SVGKit bug is fixed. More details in the commit comment.
+        let flagPath = country.flagPath
+        flagUrl = flagPath == "https://restcountries.eu/data/shn.svg" ? nil : URL(string: flagPath ?? "")
     }
 }
 

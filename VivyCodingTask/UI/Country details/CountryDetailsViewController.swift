@@ -37,7 +37,7 @@ class CountryDetailsViewController: UIViewController {
     }
 
     private func setup(with viewModel: CountryDetailsViewModel) {
-        flagImageView.sd_setImage(with: nil)
+        flagImageView.sd_setImage(with: viewModel.flagUrl)
         nameLabel.text = viewModel.name
         populationLabel.text = viewModel.population
         capitalLabel.text = viewModel.capital
