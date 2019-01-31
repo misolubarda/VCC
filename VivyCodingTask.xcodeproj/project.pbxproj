@@ -25,6 +25,10 @@
 		9A34C50F220246A5001B0046 /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C50E220246A5001B0046 /* UIView+Subview.swift */; };
 		9A34C5112202F66C001B0046 /* CurrentCountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C5102202F66C001B0046 /* CurrentCountryViewController.xib */; };
 		9A34C51422030993001B0046 /* UIAlertController+GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C51322030993001B0046 /* UIAlertController+GenericError.swift */; };
+		9A34C51B220348BF001B0046 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34C51A220348BF001B0046 /* NotificationCenter.framework */; };
+		9A34C51E220348BF001B0046 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C51D220348BF001B0046 /* TodayViewController.swift */; };
+		9A34C521220348BF001B0046 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C51F220348BF001B0046 /* MainInterface.storyboard */; };
+		9A34C525220348BF001B0046 /* VivyCodingTaskTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A34C519220348BF001B0046 /* VivyCodingTaskTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9A6075E521FE29620067C768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075E421FE29620067C768 /* AppDelegate.swift */; };
 		9A6075EF21FE29630067C768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075EE21FE29630067C768 /* Assets.xcassets */; };
 		9A6075F221FE29630067C768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075F021FE29630067C768 /* LaunchScreen.storyboard */; };
@@ -35,6 +39,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A34C523220348BF001B0046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A6075D921FE29620067C768 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A34C518220348BE001B0046;
+			remoteInfo = VivyCodingTaskTodayExtension;
+		};
 		9A6075F921FE29630067C768 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A6075D921FE29620067C768 /* Project object */;
@@ -53,6 +64,17 @@
 			files = (
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A34C529220348BF001B0046 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9A34C525220348BF001B0046 /* VivyCodingTaskTodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -79,6 +101,13 @@
 		9A34C50E220246A5001B0046 /* UIView+Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subview.swift"; sourceTree = "<group>"; };
 		9A34C5102202F66C001B0046 /* CurrentCountryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentCountryViewController.xib; sourceTree = "<group>"; };
 		9A34C51322030993001B0046 /* UIAlertController+GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+GenericError.swift"; sourceTree = "<group>"; };
+		9A34C519220348BF001B0046 /* VivyCodingTaskTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VivyCodingTaskTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A34C51A220348BF001B0046 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		9A34C51D220348BF001B0046 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		9A34C520220348BF001B0046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		9A34C522220348BF001B0046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A34C52A2203490A001B0046 /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A34C52C22034912001B0046 /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6075E121FE29620067C768 /* VivyCodingTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivyCodingTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6075E421FE29620067C768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A6075EE21FE29630067C768 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +123,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A34C516220348BE001B0046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A34C51B220348BF001B0046 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A6075DE21FE29620067C768 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,10 +155,13 @@
 		23213BB5A5DE3CCF30132A11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A34C52C22034912001B0046 /* DataLayer.framework */,
+				9A34C52A2203490A001B0046 /* DomainLayer.framework */,
 				9A60765321FE2D730067C768 /* DataLayer.framework */,
 				9A60765521FE2D730067C768 /* DomainLayer.framework */,
 				520E8EA5E157F40944934B16 /* Pods_VivyCodingTask.framework */,
 				1A7D1821B186FE1D5845FC7B /* Pods_VivyCodingTaskTests.framework */,
+				9A34C51A220348BF001B0046 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,11 +250,22 @@
 			path = "Generic components";
 			sourceTree = "<group>";
 		};
+		9A34C51C220348BF001B0046 /* VivyCodingTaskTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				9A34C51D220348BF001B0046 /* TodayViewController.swift */,
+				9A34C51F220348BF001B0046 /* MainInterface.storyboard */,
+				9A34C522220348BF001B0046 /* Info.plist */,
+			);
+			path = VivyCodingTaskTodayExtension;
+			sourceTree = "<group>";
+		};
 		9A6075D821FE29620067C768 = {
 			isa = PBXGroup;
 			children = (
 				9A6075E321FE29620067C768 /* VivyCodingTask */,
 				9A6075FB21FE29630067C768 /* VivyCodingTaskTests */,
+				9A34C51C220348BF001B0046 /* VivyCodingTaskTodayExtension */,
 				9A6075E221FE29620067C768 /* Products */,
 				2CF88F7A58433362EA7D0BDB /* Pods */,
 				23213BB5A5DE3CCF30132A11 /* Frameworks */,
@@ -226,6 +277,7 @@
 			children = (
 				9A6075E121FE29620067C768 /* VivyCodingTask.app */,
 				9A6075F821FE29630067C768 /* VivyCodingTaskTests.xctest */,
+				9A34C519220348BF001B0046 /* VivyCodingTaskTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,6 +305,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9A34C518220348BE001B0046 /* VivyCodingTaskTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A34C526220348BF001B0046 /* Build configuration list for PBXNativeTarget "VivyCodingTaskTodayExtension" */;
+			buildPhases = (
+				9A34C515220348BE001B0046 /* Sources */,
+				9A34C516220348BE001B0046 /* Frameworks */,
+				9A34C517220348BE001B0046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VivyCodingTaskTodayExtension;
+			productName = VivyCodingTaskTodayExtension;
+			productReference = 9A34C519220348BF001B0046 /* VivyCodingTaskTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9A6075E021FE29620067C768 /* VivyCodingTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A60760121FE29630067C768 /* Build configuration list for PBXNativeTarget "VivyCodingTask" */;
@@ -263,10 +332,12 @@
 				9A6075DF21FE29620067C768 /* Resources */,
 				9A34C4D821FF966E001B0046 /* Embed Frameworks */,
 				547853EDA0CA8D4794296320 /* [CP] Embed Pods Frameworks */,
+				9A34C529220348BF001B0046 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9A34C524220348BF001B0046 /* PBXTargetDependency */,
 			);
 			name = VivyCodingTask;
 			productName = VivyCodingTask;
@@ -302,6 +373,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Lubarda, Miso";
 				TargetAttributes = {
+					9A34C518220348BE001B0046 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					9A6075E021FE29620067C768 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -326,11 +400,20 @@
 			targets = (
 				9A6075E021FE29620067C768 /* VivyCodingTask */,
 				9A6075F721FE29630067C768 /* VivyCodingTaskTests */,
+				9A34C518220348BE001B0046 /* VivyCodingTaskTodayExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9A34C517220348BE001B0046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A34C521220348BF001B0046 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A6075DF21FE29620067C768 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +512,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A34C515220348BE001B0046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A34C51E220348BF001B0046 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9A6075DD21FE29620067C768 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,6 +552,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A34C524220348BF001B0046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A34C518220348BE001B0046 /* VivyCodingTaskTodayExtension */;
+			targetProxy = 9A34C523220348BF001B0046 /* PBXContainerItemProxy */;
+		};
 		9A6075FA21FE29630067C768 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9A6075E021FE29620067C768 /* VivyCodingTask */;
@@ -469,6 +565,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9A34C51F220348BF001B0046 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A34C520220348BF001B0046 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		9A6075F021FE29630067C768 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -480,6 +584,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9A34C527220348BF001B0046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivyCodingTaskTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noteboy.VivyCodingTask.VivyCodingTaskTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A34C528220348BF001B0046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VivyCodingTaskTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = noteboy.VivyCodingTask.VivyCodingTaskTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9A6075FF21FE29630067C768 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -600,6 +740,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D26EB13382DEB8234E46F227 /* Pods-VivyCodingTask.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/VivyCodingTask/Support/Info.plist";
@@ -618,6 +759,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC4B5485287242185711B5CA /* Pods-VivyCodingTask.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/VivyCodingTask/Support/Info.plist";
@@ -677,6 +819,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A34C526220348BF001B0046 /* Build configuration list for PBXNativeTarget "VivyCodingTaskTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A34C527220348BF001B0046 /* Debug */,
+				9A34C528220348BF001B0046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9A6075DC21FE29620067C768 /* Build configuration list for PBXProject "VivyCodingTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
