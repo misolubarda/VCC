@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import DomainLayer
+
+protocol CountryListViewControllerDelegate: class {
+    func countryListViewControlleDidSelect(_ country: Country)
+}
 
 protocol CountryListViewControllerDependencies: CountryListDataSourceDependencies {}
 
@@ -14,6 +19,7 @@ class CountryListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     private let dataSource: CountryListDataSource
+    weak var delegate: CountryListViewControllerDelegate?
 
     init(dependencies: CountryListViewControllerDependencies) {
         dataSource = CountryListDataSource(dependencies: dependencies)
@@ -36,6 +42,7 @@ class CountryListViewController: UIViewController {
     private func setupTableView() {
         tableView.register(for: CountryListCell.self)
         tableView.dataSource = dataSource
+        tableView.delegate = dataSource
     }
 
     private func setupSearchController() {
@@ -52,6 +59,10 @@ extension CountryListViewController: CountryListDataSourceFeedback {
 
     func countryListDataSourceFailedUpdate() {
         tableView.reloadData()
+    }
+
+    func countryListDataSourceDidSelect(_ country: Country) {
+        delegate?.countryListViewControlleDidSelect(country)
     }
 }
 

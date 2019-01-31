@@ -12,6 +12,7 @@ import DomainLayer
 protocol CountryListDataSourceFeedback: class {
     func countryListDataSourceDidUpdate()
     func countryListDataSourceFailedUpdate()
+    func countryListDataSourceDidSelect(_ country: Country)
 }
 
 protocol CountryListDataSourceDependencies {
@@ -55,5 +56,12 @@ extension CountryListDataSource: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countries.count
+    }
+}
+
+extension CountryListDataSource: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let country = countries[indexPath.row]
+        delegate?.countryListDataSourceDidSelect(country)
     }
 }

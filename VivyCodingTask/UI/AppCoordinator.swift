@@ -34,6 +34,7 @@ class AppCoordinator {
 
     private func getCountryListVC(dependencies: CountryListViewControllerDependencies) -> CountryListViewController {
         let countryListVC = CountryListViewController(dependencies: dependencies)
+        countryListVC.delegate = self
         countryListVC.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "My Country", style: .plain, target: self, action: #selector(myCountryButtonTapped))
 
         return countryListVC
@@ -47,6 +48,12 @@ class AppCoordinator {
 
     @objc private func myCountryButtonTapped() {
         navigation.pushViewController(getCurrentCountryVC(dependencies: dependencies), animated: true)
+    }
+}
+
+extension AppCoordinator: CountryListViewControllerDelegate {
+    func countryListViewControlleDidSelect(_ country: Country) {
+        navigation.pushViewController(CountryDetailsViewController(country: country), animated: true)
     }
 }
 
