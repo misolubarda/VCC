@@ -11,7 +11,7 @@ import DomainLayer
 
 protocol CurrentCountryViewControllerDelegate: class {
     func currentCountryViewController(_ viewController: UIViewController, didUpdatewith country: Country)
-    func currentCountryViewControllerDidFailUpdating()
+    func currentCountryViewControllerDidFailUpdating(_ viewController: UIViewController)
 }
 
 protocol CurrentCountryViewControllerDependencies {
@@ -47,7 +47,7 @@ class CurrentCountryViewController: UIViewController {
                 self.delegate?.currentCountryViewController(self, didUpdatewith: country)
             case .error:
                 // hadnle error:
-                self.delegate?.currentCountryViewControllerDidFailUpdating()
+                self.delegate?.currentCountryViewControllerDidFailUpdating(self)
             }
         }
     }

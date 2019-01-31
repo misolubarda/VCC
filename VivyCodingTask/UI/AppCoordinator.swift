@@ -63,7 +63,10 @@ extension AppCoordinator: CurrentCountryViewControllerDelegate {
         viewController.embedChildVC(countryDetailsVC, edgeInsets: .zero)
     }
 
-    func currentCountryViewControllerDidFailUpdating() {
-        navigation.popViewController(animated: true)
+    func currentCountryViewControllerDidFailUpdating(_ viewController: UIViewController) {
+        let alertController = UIAlertController.genericErrorAlert { [weak self] _ in
+            self?.navigation.popViewController(animated: true)
+        }
+        viewController.present(alertController, animated: true)
     }
 }
