@@ -18,30 +18,43 @@ public class CountryListInteractor: CountryListUseCase {
     }
 
     public func fetch(term: String?, _ completion: @escaping (Response<[Country]>) -> Void) {
-        locationProvider.fetch { [weak self] response in
-            switch response {
-            case let .success(location):
-                self?.sortedCountries(term: term, location: location, completion: completion)
-            case let .error(error):
+        var locationResponse: Response<Location>?
+        var countriesResponse: Response<[Country]>?
+        let dispatchGroup = DispatchGroup()
+
+        dispatchGroup.enter()
+        locationProvider.fetch { response in
+            locationResponse = response
+            dispatchGroup.leave()
+        }
+
+        dispatchGroup.enter()
+        countriesProvider.fetch { response in
+            countriesResponse = response
+            dispatchGroup.leave()
+        }
+
+        dispatchGroup.notify(queue: .main) { [weak self] in
+            self?.countryList(term: term, for: locationResponse, and: countriesResponse, completion)
+        }
+    }
+
+    private func countryList(term: String?, for locationResponse: Response<Location>?, and countriesResponse: Response<[Country]>?, _ completion: (Response<[Country]>) -> Void) {
+        guard let locationResponse = locationResponse, let countriesResponse = countriesResponse else {
+            completion(.error(CountryListInteractorError.dataFetch))
+            return
+        }
+
+        guard case let .success(location) = locationResponse, case let .success(countries) = countriesResponse else {
+            if case let .error(error) = locationResponse {
+                completion(.error(error))
+            } else if case let .error(error) = countriesResponse {
                 completion(.error(error))
             }
+            return
         }
-    }
 
-    private func sortedCountries(term: String?, location: Location, completion: @escaping (Response<[Country]>) -> Void) {
-        countriesProvider.fetch { [weak self] response in
-            guard let self = self else { return }
-            switch response {
-            case let .success(countries):
-                completion(.success(self.sortedFilteredCountriesUsing(location: location, term: term, from: countries)))
-            case .error:
-                completion(response)
-            }
-        }
-    }
-
-    private func sortedFilteredCountriesUsing(location: Location, term: String?, from countries: [Country]) -> [Country] {
-        let sorted = countries.sorted() { first, second in
+        var result = countries.sorted { first, second in
             guard let firstLocation = first.location else { return false }
             guard let secondLocation = second.location else { return true }
             let distanceToFirst = locationProvider.distance(from: firstLocation, to: location)
@@ -50,24 +63,24 @@ public class CountryListInteractor: CountryListUseCase {
         }
 
         if let term = term {
-            return sorted.filteredUsingTerm(term)
+            result = result.filteredUsingTerm(term)
         }
 
-        return sorted
+        completion(.success(result))
     }
 }
 
 private extension Array where Element == Country {
     func filteredUsingTerm(_ term: String) -> [Country] {
         return filter { country in
-            var include = country.name.localizedCaseInsensitiveContains(term)
-            if let capitalCity = country.capitalCity {
-                include = include || capitalCity.localizedCaseInsensitiveContains(term)
-            }
-            if let languages = country.languages {
-                include = include || languages.contains { $0.localizedCaseInsensitiveContains(term) }
-            }
-            return include
+            if country.name.localizedCaseInsensitiveContains(term) { return true }
+            if let capitalCity = country.capitalCity, capitalCity.localizedCaseInsensitiveContains(term) { return true }
+            if let languages = country.languages, languages.contains(where: { $0.localizedCaseInsensitiveContains(term) }) { return true }
+            return false
         }
     }
+}
+
+enum CountryListInteractorError: Error {
+    case dataFetch
 }
