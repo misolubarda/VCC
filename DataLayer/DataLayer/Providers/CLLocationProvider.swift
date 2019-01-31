@@ -25,7 +25,9 @@ public class CLLocationProvider: NSObject, LocationProvider, CurrentCountryIsoCo
 
     public func fetch(_ completion: @escaping (Response<Location>) -> Void) {
         if let location = locationManager.location?.locationEntity {
-            completion(.success(location))
+            DispatchQueue.main.async {
+                completion(.success(location))
+            }
             return
         }
         self.completion = completion
