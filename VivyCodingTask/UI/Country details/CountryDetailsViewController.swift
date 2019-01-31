@@ -2,18 +2,14 @@
 //  CountryDetailsViewController.swift
 //  VivyCodingTask
 //
-//  Created by Lubarda, Miso on 29.01.19.
+//  Created by Lubarda, Miso on 30.01.19.
 //  Copyright © 2019 Lubarda, Miso. All rights reserved.
 //
 
 import UIKit
 import DomainLayer
 
-protocol CurrentCountryViewControllerDependencies {
-    var currentCountryUseCase: CurrentCountryUseCase { get }
-}
-
-class CurrentCountryViewController: UIViewController {
+class CountryDetailsViewController: UIViewController {
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var populationLabel: UILabel!
@@ -23,10 +19,10 @@ class CurrentCountryViewController: UIViewController {
     @IBOutlet weak var languagesLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
 
-    private let dependencies: CurrentCountryViewControllerDependencies
+    private let country: Country
 
-    init(dependencies: CurrentCountryViewControllerDependencies) {
-        self.dependencies = dependencies
+    init(country: Country) {
+        self.country = country
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -37,19 +33,7 @@ class CurrentCountryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fetch()
-    }
-
-    private func fetch() {
-        dependencies.currentCountryUseCase.fetch { [weak self] response in
-            switch response {
-            case let .success(country):
-                self?.setup(with: CountryDetailsViewModel(country: country))
-            case let .error(error):
-                //handle error
-                break
-            }
-        }
+        setup(with: CountryDetailsViewModel(country: country))
     }
 
     private func setup(with viewModel: CountryDetailsViewModel) {

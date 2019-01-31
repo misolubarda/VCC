@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrentCountryViewController" customModule="VivyCodingTask" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountryDetailsViewController" customModule="VivyCodingTask" customModuleProvider="target">
             <connections>
                 <outlet property="capitalLabel" destination="9Nz-R2-h7t" id="hHO-0g-yvF"/>
                 <outlet property="currencyLabel" destination="dMr-kh-IcF" id="mh0-GZ-ql3"/>

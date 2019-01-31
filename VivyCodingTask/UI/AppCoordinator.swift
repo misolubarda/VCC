@@ -38,12 +38,25 @@ class AppCoordinator {
 
         return countryListVC
     }
+
+    private func getCurrentCountryVC(dependencies: CurrentCountryViewControllerDependencies) -> CurrentCountryViewController {
+        let currentCountryVC = CurrentCountryViewController(dependencies: dependencies)
+        currentCountryVC.delegate = self
+        return currentCountryVC
+    }
+
+    @objc private func myCountryButtonTapped() {
+        navigation.pushViewController(getCurrentCountryVC(dependencies: dependencies), animated: true)
+    }
 }
 
-// MARK: Navigation item button action
+extension AppCoordinator: CurrentCountryViewControllerDelegate {
+    func currentCountryViewController(_ viewController: UIViewController, didUpdatewith country: Country) {
+        let countryDetailsVC = CountryDetailsViewController(country: country)
+        viewController.embedChildVC(countryDetailsVC, edgeInsets: .zero)
+    }
 
-extension AppCoordinator {
-    @objc func myCountryButtonTapped() {
-        navigation.pushViewController(CurrentCountryViewController(dependencies: dependencies), animated: true)
+    func currentCountryViewControllerDidFailUpdating() {
+        navigation.popViewController(animated: true)
     }
 }
