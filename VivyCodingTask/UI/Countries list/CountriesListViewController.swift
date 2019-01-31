@@ -34,6 +34,8 @@ class CountryListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Countries"
+
         setupTableView()
         setupSearchController()
         dataSource.fetch(term: nil)

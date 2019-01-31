@@ -33,6 +33,8 @@ class CountryDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Country Details"
+
         setup(with: CountryDetailsViewModel(country: country))
     }
 

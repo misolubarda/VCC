@@ -34,6 +34,8 @@ class CurrentCountryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Current Country"
+
         fetch()
     }
 
