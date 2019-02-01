@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8A92451DE1DE7D35517E107F /* Pods_VivyCodingTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520E8EA5E157F40944934B16 /* Pods_VivyCodingTask.framework */; };
+		9A140C3E2205B1230021EC53 /* UserDefaults+Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A140C3D2205B1230021EC53 /* UserDefaults+Storage.swift */; };
+		9A140C402205B1C90021EC53 /* CurrentCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A140C3F2205B1C90021EC53 /* CurrentCountry.swift */; };
 		9A34C4C621FF51CB001B0046 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4C521FF51CB001B0046 /* AppCoordinator.swift */; };
 		9A34C4CB21FF5316001B0046 /* CountryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C4CA21FF5316001B0046 /* CountryListViewController.xib */; };
 		9A34C4CD21FF53D4001B0046 /* CountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C4CC21FF53D4001B0046 /* CountriesListViewController.swift */; };
@@ -29,6 +31,7 @@
 		9A34C51E220348BF001B0046 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C51D220348BF001B0046 /* TodayViewController.swift */; };
 		9A34C521220348BF001B0046 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A34C51F220348BF001B0046 /* MainInterface.storyboard */; };
 		9A34C525220348BF001B0046 /* VivyCodingTaskTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9A34C519220348BF001B0046 /* VivyCodingTaskTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9A34C52E2204A6D3001B0046 /* CountryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A34C50722020129001B0046 /* CountryDetailsViewModel.swift */; };
 		9A6075E521FE29620067C768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6075E421FE29620067C768 /* AppDelegate.swift */; };
 		9A6075EF21FE29630067C768 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075EE21FE29630067C768 /* Assets.xcassets */; };
 		9A6075F221FE29630067C768 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A6075F021FE29630067C768 /* LaunchScreen.storyboard */; };
@@ -84,6 +87,8 @@
 		221590A69FE51003AFD0796D /* Pods-VivyCodingTaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTaskTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTaskTests/Pods-VivyCodingTaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		520E8EA5E157F40944934B16 /* Pods_VivyCodingTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VivyCodingTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA77EEE60A982ED1EAC0F7E /* Pods-VivyCodingTaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VivyCodingTaskTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VivyCodingTaskTests/Pods-VivyCodingTaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		9A140C3D2205B1230021EC53 /* UserDefaults+Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Storage.swift"; sourceTree = "<group>"; };
+		9A140C3F2205B1C90021EC53 /* CurrentCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCountry.swift; sourceTree = "<group>"; };
 		9A34C4C521FF51CB001B0046 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9A34C4CA21FF5316001B0046 /* CountryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryListViewController.xib; sourceTree = "<group>"; };
 		9A34C4CC21FF53D4001B0046 /* CountriesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesListViewController.swift; sourceTree = "<group>"; };
@@ -254,8 +259,10 @@
 			isa = PBXGroup;
 			children = (
 				9A34C51D220348BF001B0046 /* TodayViewController.swift */,
+				9A140C3D2205B1230021EC53 /* UserDefaults+Storage.swift */,
 				9A34C51F220348BF001B0046 /* MainInterface.storyboard */,
 				9A34C522220348BF001B0046 /* Info.plist */,
+				9A140C3F2205B1C90021EC53 /* CurrentCountry.swift */,
 			);
 			path = VivyCodingTaskTodayExtension;
 			sourceTree = "<group>";
@@ -516,7 +523,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A34C52E2204A6D3001B0046 /* CountryDetailsViewModel.swift in Sources */,
 				9A34C51E220348BF001B0046 /* TodayViewController.swift in Sources */,
+				9A140C402205B1C90021EC53 /* CurrentCountry.swift in Sources */,
+				9A140C3E2205B1230021EC53 /* UserDefaults+Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
