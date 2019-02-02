@@ -17,6 +17,7 @@
 		9A60766021FE2F300067C768 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60765B21FE2F300067C768 /* NetworkSession.swift */; };
 		9A60766121FE2F300067C768 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A60765C21FE2F300067C768 /* WebService.swift */; };
 		9A6F8D0521FE49B100276B08 /* RCCountriesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F8D0421FE49B100276B08 /* RCCountriesProvider.swift */; };
+		9AEB7F3E2205BBE600A17B6F /* DomainLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AEB7F3D2205BBE600A17B6F /* DomainLayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		9A60765B21FE2F300067C768 /* NetworkSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		9A60765C21FE2F300067C768 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		9A6F8D0421FE49B100276B08 /* RCCountriesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCCountriesProvider.swift; sourceTree = "<group>"; };
+		9AEB7F3D2205BBE600A17B6F /* DomainLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DomainLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AEB7F3E2205BBE600A17B6F /* DomainLayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +82,7 @@
 				9A60763721FE2D030067C768 /* DataLayer */,
 				9A60764221FE2D030067C768 /* DataLayerTests */,
 				9A60763621FE2D030067C768 /* Products */,
+				9AEB7F3C2205BBE600A17B6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +133,14 @@
 				9A34C4EF21FFD322001B0046 /* CLLocationProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		9AEB7F3C2205BBE600A17B6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AEB7F3D2205BBE600A17B6F /* DomainLayer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
