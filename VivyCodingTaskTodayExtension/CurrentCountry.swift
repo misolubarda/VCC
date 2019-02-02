@@ -21,10 +21,13 @@ struct CurrentCountry: Country, Codable {
                   currentLocation: currentlocation,
                   capitalCity: country.capitalCity,
                   languages: country.languages,
-                  iso: country.iso)
+                  iso: country.iso,
+                  region: country.region,
+                  regionalBlocks: country.regionalBlocks,
+                  currencies: country.currencies)
     }
 
-    init(name: String, flagPath: String?, population: Int?, area: Double?, currentLocation: CurrentLocation?, capitalCity: String?, languages: [String]?, iso: String?) {
+    init(name: String, flagPath: String?, population: Int?, area: Double?, currentLocation: CurrentLocation?, capitalCity: String?, languages: [String]?, iso: String?, region: String?, regionalBlocks: [String]?, currencies: [String]?) {
         self.name = name
         self.flagPath = flagPath
         self.population = population
@@ -33,6 +36,9 @@ struct CurrentCountry: Country, Codable {
         self.capitalCity = capitalCity
         self.languages = languages
         self.iso = iso
+        self.region = region
+        self.regionalBlocks = regionalBlocks
+        self.currencies = currencies
     }
 
     var name: String
@@ -46,6 +52,9 @@ struct CurrentCountry: Country, Codable {
     var capitalCity: String?
     var languages: [String]?
     var iso: String?
+    var region: String?
+    var regionalBlocks: [String]?
+    var currencies: [String]?
 }
 
 struct CurrentLocation: Location, Codable {

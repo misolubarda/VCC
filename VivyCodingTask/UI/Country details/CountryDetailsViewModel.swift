@@ -24,9 +24,9 @@ struct CountryDetailsViewModel {
         population = country.population?.string ?? "N/A"
         capital = country.capitalCity ?? "N/A"
         languages = country.languages?.joined(separator: ", ") ?? "N/A"
-        region = "N/A"
-        regionBlocks = "N/A"
-        currency = "N/A"
+        region = country.region ?? "N/A"
+        regionBlocks = country.regionalBlocks?.joined(separator: ", ") ?? "N/A"
+        currency = country.currencies?.joined(separator: ", ") ?? "N/A"
 
         // Remove this check when SVGKit bug is fixed. More details in the commit comment.
         let flagPath = country.flagPath

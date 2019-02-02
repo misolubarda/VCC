@@ -48,9 +48,11 @@ public class RCCountriesProvider: CountriesProvider {
 
 private struct RCCountry: Decodable, Country {
     enum CodingKeys: String, CodingKey {
-        case name, flag, population, area, latlng, capital
+        case name, flag, population, area, latlng, capital, region
         case rcLanguages = "languages"
         case iso = "alpha2Code"
+        case rcRegionalBlocks = "regionalBlocs"
+        case rcCurrencies = "currencies"
     }
 
     let name: String
@@ -61,6 +63,9 @@ private struct RCCountry: Decodable, Country {
     let capital: String?
     let rcLanguages: [RCLanguage]?
     let iso: String?
+    let region: String?
+    let rcRegionalBlocks: [RCRegionalBlock]?
+    let rcCurrencies: [RCCurrency]?
 
     var flagPath: String? {
         return flag
@@ -81,8 +86,24 @@ private struct RCCountry: Decodable, Country {
     var languages: [String]? {
         return rcLanguages?.map { $0.name }
     }
+
+    var regionalBlocks: [String]? {
+        return rcRegionalBlocks?.map { $0.name }
+    }
+
+    var currencies: [String]? {
+        return rcCurrencies?.compactMap { $0.name }
+    }
 }
 
 private struct RCLanguage: Decodable {
     let name: String
+}
+
+private struct RCRegionalBlock: Decodable {
+    let name: String
+}
+
+private struct RCCurrency: Decodable {
+    let name: String?
 }
