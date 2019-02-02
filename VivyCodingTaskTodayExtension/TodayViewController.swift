@@ -78,7 +78,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         case .compact:
             preferredContentSize = CGSize(width: maxSize.width, height: 110)
         case .expanded:
-            preferredContentSize = CGSize(width: maxSize.width, height: 110 + 194)
+            preferredContentSize = CGSize(width: maxSize.width, height: 110 + 205)
         }
     }
 }
