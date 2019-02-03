@@ -45,6 +45,7 @@ class CountryListViewController: UIViewController {
         tableView.register(for: CountryListCell.self)
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
+        tableView.tableFooterView = UIView()
     }
 
     private func setupSearchController() {
