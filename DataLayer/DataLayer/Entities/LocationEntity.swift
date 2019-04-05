@@ -9,5 +9,5 @@
 import DomainLayer
 
 struct LocationEntity: Location {
-    let coordinate: Coordinate
+    let coordinates: Coordinates
 }

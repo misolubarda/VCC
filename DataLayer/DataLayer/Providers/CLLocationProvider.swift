@@ -100,18 +100,18 @@ private extension CLAuthorizationStatus {
 
 private extension CLLocation {
     var locationEntity: Location {
-        return LocationEntity(coordinate: coordinate.coordinateEntity)
+        return LocationEntity(coordinates: coordinate.coordinatesEntity)
     }
 }
 
 private extension CLLocationCoordinate2D {
-    var coordinateEntity: Coordinate {
-        return CoordinateEntity(latitude: latitude, longitude: longitude)
+    var coordinatesEntity: Coordinates {
+        return CoordinatesEntity(latitude: latitude, longitude: longitude)
     }
 }
 
 private extension Location {
     var clLocation: CLLocation {
-        return CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        return CLLocation(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
 }

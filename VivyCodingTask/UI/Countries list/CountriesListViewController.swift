@@ -24,7 +24,6 @@ class CountryListViewController: UIViewController {
     init(dependencies: CountryListViewControllerDependencies) {
         dataSource = CountryListDataSource(dependencies: dependencies)
         super.init(nibName: nil, bundle: nil)
-        dataSource.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -38,9 +37,10 @@ class CountryListViewController: UIViewController {
 
         setupTableView()
         setupSearchController()
+        dataSource.delegate = self
         dataSource.fetch(term: nil)
     }
-
+    
     private func setupTableView() {
         tableView.register(for: CountryListCell.self)
         tableView.dataSource = dataSource

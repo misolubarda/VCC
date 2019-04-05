@@ -59,22 +59,22 @@ struct CurrentCountry: Country, Codable {
 
 struct CurrentLocation: Location, Codable {
     init(location: Location) {
-        self.init(currentCoordinate: CurrentCoordinate(coordinate: location.coordinate))
+        self.init(currentCoordinates: CurrentCoordinates(coordinates: location.coordinates))
     }
 
-    init(currentCoordinate: CurrentCoordinate) {
-        self.currentCoordinate = currentCoordinate
+    init(currentCoordinates: CurrentCoordinates) {
+        self.currentCoordinates = currentCoordinates
     }
 
-    let currentCoordinate: CurrentCoordinate
-    var coordinate: Coordinate {
-        return currentCoordinate
+    let currentCoordinates: CurrentCoordinates
+    var coordinates: Coordinates {
+        return currentCoordinates
     }
 }
 
-struct CurrentCoordinate: Coordinate, Codable {
-    init(coordinate: Coordinate) {
-        self.init(latitude: coordinate.latitude, longitude: coordinate.longitude)
+struct CurrentCoordinates: Coordinates, Codable {
+    init(coordinates: Coordinates) {
+        self.init(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
 
     init(latitude: Double, longitude: Double) {

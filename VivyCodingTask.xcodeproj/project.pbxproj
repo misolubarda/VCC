@@ -202,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				9A34C51222030971001B0046 /* Generic components */,
-				9A6075E421FE29620067C768 /* AppDelegate.swift */,
 				9A34C4C521FF51CB001B0046 /* AppCoordinator.swift */,
 				9A34C4C721FF52AA001B0046 /* Countries list */,
 				9A34C4FC2200A2BC001B0046 /* Current country */,
@@ -308,6 +307,7 @@
 		9A6075E321FE29620067C768 /* VivyCodingTask */ = {
 			isa = PBXGroup;
 			children = (
+				9A6075E421FE29620067C768 /* AppDelegate.swift */,
 				9A34C4D021FF692D001B0046 /* AppDependencies.swift */,
 				9A34C4E621FFA417001B0046 /* Extensions */,
 				9A34C4C321FF1E79001B0046 /* UI */,

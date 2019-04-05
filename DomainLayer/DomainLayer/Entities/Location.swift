@@ -9,10 +9,10 @@
 import Foundation
 
 public protocol Location {
-    var coordinate: Coordinate { get }
+    var coordinates: Coordinates { get }
 }
 
-public protocol Coordinate {
+public protocol Coordinates {
     var latitude: Double { get }
     var longitude: Double { get }
 }

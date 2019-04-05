@@ -1,5 +1,5 @@
 //
-//  CoordinateEntity.swift
+//  CoordinatesEntity.swift
 //  DataLayer
 //
 //  Created by Lubarda, Miso on 29.01.19.
@@ -8,7 +8,7 @@
 
 import DomainLayer
 
-struct CoordinateEntity: Coordinate {
+struct CoordinatesEntity: Coordinates {
     let latitude: Double
     let longitude: Double
 }

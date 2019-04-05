@@ -129,10 +129,10 @@
 		9A60761321FE2CE70067C768 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9A60766221FE2F690067C768 /* Entities */,
 				9A58A9EF21FE38610034CDF5 /* Providers */,
 				9A58A9F321FE386E0034CDF5 /* Interactors */,
 				9A58A9ED21FE38610034CDF5 /* Use cases */,
-				9A60766221FE2F690067C768 /* Entities */,
 				9A60761521FE2CE70067C768 /* Info.plist */,
 			);
 			path = DomainLayer;

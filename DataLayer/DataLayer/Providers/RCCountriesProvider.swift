@@ -76,7 +76,7 @@ private struct RCCountry: Decodable, Country {
         let latitude = latlng[0]
         let longitude = latlng[1]
 
-        return LocationEntity(coordinate: CoordinateEntity(latitude: latitude, longitude: longitude))
+        return LocationEntity(coordinates: CoordinatesEntity(latitude: latitude, longitude: longitude))
     }
 
     var capitalCity: String? {
